@@ -1,5 +1,9 @@
-<template>
-  <Tutorial />
+<template lang='pug'>
+
+  .Home
+    Header
+    CoverPage
+
 </template>
 
 <script>
