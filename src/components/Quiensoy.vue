@@ -3,8 +3,8 @@
   .Quiensoy
     .infoBox
       .whoamI
-        h1  ¿No sabes quien soy?
-        p Me llamo Yelitza Mota, pero me puedes llamar Yeli, y si, mi apellido real es Mota, no es broma. Y no, no vendo, #{del por ahora}.
+        h1 ¿No sabes quien soy?
+        p Me llamo Yelitza Mota, pero me puedes llamar Yeli, y si, mi apellido real es Mota, no es broma. Y no, no vendo, <del> por ahora.</del>
         .moreInfoOne
           p Me gusta leer, novelas de ficción que me hagan salir del mundo real, amo las conversaciones amenas entre amigos, soy muy emotiva y alegre.
         .moreInfoTwo
