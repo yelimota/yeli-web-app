@@ -1,7 +1,8 @@
 <template lang='pug'>
 
   .logo
-    p soy un logo
+    figure
+      img(class="image" src="" alt="logotype")
 
 </template>
 
