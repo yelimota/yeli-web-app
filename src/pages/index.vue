@@ -3,6 +3,7 @@
   .Home
     Header
     CoverPage
+    Quiensoy
 
 </template>
 
