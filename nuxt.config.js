@@ -1,7 +1,9 @@
+import Build from './config/build'
+import Server from './config/server'
+
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-  srcDir: 'src/',
+  ...Server,
+  ...Build,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -39,9 +41,5 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-  ],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  ]
 }
