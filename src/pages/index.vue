@@ -1,9 +1,12 @@
 <template lang='pug'>
 
   .Home
-    Header
+
+    //- Header
+
     CoverPage
-    Quiensoy
+
+    //- WhoIAm
 
 </template>
 
