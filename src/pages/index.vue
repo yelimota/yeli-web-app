@@ -8,6 +8,10 @@
 
     //- WhoIAm
 
+    SocialButton
+    SocialButton
+    //- Buttons
+
 </template>
 
 <script>
