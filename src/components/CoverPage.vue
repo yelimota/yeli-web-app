@@ -32,13 +32,24 @@ export default {
 
 <style lang='stylus' scoped>
 .cover-page
+  position relative
+  height 100vh
+  &::before
+    top 0
+    left 0
+    content ''
+    position: absolute
+    background: $clr-secondary
+    width 100%
+    height 100%
+
   &__background
     position absolute
     width 100%
     height 100%
-    z-index -1
+    opacity 0.45
+
   &__titles-group
-    width 100%
+    position relative
     text-align: center
-    height: 100%
 </style>
