@@ -1,15 +1,15 @@
 <template lang='pug'>
 
   .cover-page
-    .cover-page_title-group
+    .cover-page__titles-group
       h1 YELI MOTA
       h2 STREAMER / YOUTUBER
       h3 CONTENT CREATOR
-    .cover-page_buttons-box
-      button(class="btn btn-twitch")
+    .cover-page__buttons-box
+      button(class="btn btn-twitch cover-page__button")
         span( class="icon") Twitch
         span Twitch
-      button(class="btn btn-youtube")
+      button(class="btn btn-youtube cover-page__button")
         span( class="icon") Youtube
         span Youtube
 

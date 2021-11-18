@@ -1,20 +1,20 @@
 <template lang='pug'>
 
   header.header
-    nav.header_nav
-      button.header_nav_advisor ASESORA
-      button.header_nav_lawyer ABOGADA
-      .header_nav_desktop-button
-        button.header_nav_desktop-button_curiosities CURIOSIDADES
-        button.header_nav_desktop-button_schedules HORARIOS
-        button.header_nav_desktop-button_moderators MODERADORES
-      select.header_nav_languages
+    nav.header__nav
+      button.header__advisor ASESORA
+      button.header__lawyer ABOGADA
+      .header__desktop-button
+        button.header__desktop-button__link CURIOSIDADES
+        button.header__desktop-button__link HORARIOS
+        button.header__desktop-button__link MODERADORES
+      select.header__languages
         option ESPAÑOL
         option INGLES
-      button(class="fas fa-bars header_nav_button")
-      button.header_nav_togglebar
-        img(src="imagetogglebarLight.png" class="header_nav_togglebar_light")
-        img(src="imagetogglebarDark.png" class="header_nav_togglebar_dark")
+      button(class="fas fa-bars header__button")
+      button.header__togglebar
+        img(src="imagetogglebarLight.png" class="header__togglebar__light")
+        img(src="imagetogglebarDark.png" class="header__togglebar__dark")
     //- nav
     //-   a(href="#", class="fas fa-bars")
     //-   .togglebar
