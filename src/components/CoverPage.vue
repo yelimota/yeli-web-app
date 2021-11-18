@@ -1,7 +1,7 @@
 <template lang='pug'>
 
   .cover-page
-    img.cover-page__background(src="../assets/images/cover-page_bg_desktop.png")
+    img.cover-page__background(src="../assets/images/cover-page_bg_mobil.png")
     .cover-page__titles-group
       h1.cover-page__title
         |YELI MOTA
@@ -12,12 +12,14 @@
     .cover-page__buttons-box
       .cover-page__button
         SocialButton(
+          spanText='Twitch'
           typeButton='twitch'
-          srcIcon='')
+          srcIcon='~assets/icons/twitch.svg')
       .cover-page__button
         SocialButton(
+          spanText='Gmail'
           typeButton='gmail'
-          srcIcon='')
+          srcIcon='~assets/icons/gmail.svg')
 
 </template>
 
@@ -33,6 +35,9 @@ export default {
 .cover-page
   position relative
   height 100vh
+  display flex
+  flex-direction column
+  justify-content end
   &::before
     top 0
     left 0
@@ -51,4 +56,16 @@ export default {
   &__titles-group
     position relative
     text-align: center
+  &__title
+    font-family: $font-streamer-title
+    color: $clr-white
+    font-size 15vw
+    font-weight 400
+    line-height 15vw
+  &__subtitle
+    font-family $font-streamer-subtitle
+    color: $clr-white
+    font-size: 8.5vw
+    line-height: 3vw
+    font-weight 700
 </style>
