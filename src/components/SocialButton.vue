@@ -14,4 +14,8 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
+  .cover-page__button
+    display: block
+    margin: auto
+    font-size: 4vw
 </style>
