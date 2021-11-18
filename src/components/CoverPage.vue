@@ -10,15 +10,14 @@
       h3.cover-page__subtitle
         |CONTENT CREATOR
     .cover-page__buttons-box
-      div.cover-page__button
-      div.cover-page__button
-
-      //- button(class="btn btn-twitch cover-page__button")
-      //-   span( class="icon") Twitch
-      //-   span Twitch
-      //- button(class="btn btn-youtube cover-page__button")
-      //-   span( class="icon") Youtube
-      //-   span Youtube
+      .cover-page__button
+        SocialButton(
+          typeButton='twitch'
+          srcIcon='')
+      .cover-page__button
+        SocialButton(
+          typeButton='gmail'
+          srcIcon='')
 
 </template>
 

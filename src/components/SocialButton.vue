@@ -1,21 +1,36 @@
 <template lang='pug'>
 
-  button(class="btn btn-twitch cover-page__button")
-    span( class="icon") Twitch
-    span Twitch
+  button.social-button(:class='`social-button--${typeButton}`')
+    img.social-button__icon(:src='srcIcon')
+    span.social-button__text Twitch
 
 </template>
 <script>
 
 export default {
-  name: 'SocialButton'
+  name: 'SocialButton',
+  props: {
+    typeButton: {
+      type: String,
+      default: 'twitch'
+    },
+    srcIcon: {
+      type: String,
+      default: ''
+    }
+  }
 }
 
 </script>
 
 <style lang='stylus' scoped>
-  .cover-page__button
+  .social-button
     display: block
     margin: auto
     font-size: 4vw
+
+  .social-button--twitch
+    background green
+  .social-button--gmail
+    background green
 </style>
