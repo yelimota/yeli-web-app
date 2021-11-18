@@ -2,16 +2,22 @@
 
   .cover-page
     .cover-page__titles-group
-      h1 YELI MOTA
-      h2 STREAMER / YOUTUBER
-      h3 CONTENT CREATOR
+      h1.cover-page__title
+        |YELI MOTA
+      h2.cover-page__subtitle
+        |STREAMER / YOUTUBER
+      h3.cover-page__subtitle
+        |CONTENT CREATOR
     .cover-page__buttons-box
-      button(class="btn btn-twitch cover-page__button")
-        span( class="icon") Twitch
-        span Twitch
-      button(class="btn btn-youtube cover-page__button")
-        span( class="icon") Youtube
-        span Youtube
+      div.cover-page__button
+      div.cover-page__button
+
+      //- button(class="btn btn-twitch cover-page__button")
+      //-   span( class="icon") Twitch
+      //-   span Twitch
+      //- button(class="btn btn-youtube cover-page__button")
+      //-   span( class="icon") Youtube
+      //-   span Youtube
 
 </template>
 
