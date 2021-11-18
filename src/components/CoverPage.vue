@@ -1,7 +1,7 @@
 <template lang='pug'>
 
   .cover-page
-    img.cover-page__background(src="https://images.ctfassets.net/hrltx12pl8hq/58CIvG6Whv49bsmRbqaEZ6/e42a73d8ddef6f9c126fa49d384be678/6.jpg?fit=fill&w=480&h=270")
+    img.cover-page__background(src="../assets/images/cover-page_bg_desktop.png")
     .cover-page__titles-group
       h1.cover-page__title
         |YELI MOTA
@@ -35,6 +35,10 @@ export default {
   &__background
     position absolute
     width 100%
+    height 100%
     z-index -1
-
+  &__titles-group
+    width 100%
+    text-align: center
+    height: 100%
 </style>
