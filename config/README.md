@@ -17,7 +17,7 @@ yarn add -D pug pug-plain-loader
 
 ### #02 - Stylus
 
->Use this module only to import variables, mixins, functions (etc.) to Vue components
+> You only need to install the dependency
 
 ```bash
 # install dependencie
