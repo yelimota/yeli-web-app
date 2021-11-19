@@ -1,6 +1,11 @@
 // ** Customize config server
 
 export default {
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
+
   // No server-side rendering (only client-side rendering)
   ssr: false,
 
@@ -8,10 +13,14 @@ export default {
   // nuxt generate for static sites
   target: 'static',
 
-  server: {
-    port: 3000, // default: 3000
-    host: '0.0.0.0' // default: localhost
-  },
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
+  // Define the workspace of Nuxt application
+  rootDir: './',
+
+  // Define the source directory of your Nuxt application.
+  srcDir: 'src/',
 
   // Nuxt lets you customize the CLI configuration.
   cli: {
