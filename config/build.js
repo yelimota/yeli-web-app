@@ -1,5 +1,5 @@
 // ** Customize config build project
-
+import Server from './server'
 export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -11,6 +11,12 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    ['@nuxtjs/router',
+      {
+        path: `${Server.srcDir}router/`,
+        fileName: 'index.js'
+      }
+    ]
   ]
 }

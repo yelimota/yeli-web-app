@@ -11,7 +11,6 @@ Additional dependencies to nuxt default settings
 > You only need to install the dependency
 
 ```bash
-# install dependencie
 yarn add -D pug pug-plain-loader
 ```
 
@@ -20,7 +19,7 @@ yarn add -D pug pug-plain-loader
 > Because Nuxt-edge is not stable yet, it is necessary to install an older version of `stylus-loader v3.0.2`, since the latest versions cause some errors.
 
 ```bash
-# install dependencie
+# install dependency
 yarn add -D stylus stylus-loader@3.0.2
 ```
 
@@ -96,25 +95,95 @@ __Usage__
 
 *An example of documented use*
 
+`vue-svg-loader`
+
 ```html
 <template>
-  <div v-html="rawNuxtLogo" />
+  <NuxtLogo />
 </template>
 
 <script>
-  import rawNuxtLogo from "~/assets/nuxt.svg?raw";
+  import NuxtLogo from "~/assets/nuxt.svg?inline";
   export default {
-    data() {
-      return { rawNuxtLogo };
-    },
+    components: { NuxtLogo },
   };
 </script>
 ```
 
 ```html
-<div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298">
-    <g fill-rule="nonzero" fill="none"><path></path></g>
-  </svg>
-</div>
+<svg xmlns="http://www.w3.org/2000/svg"><path></path></svg>
+```
+
+### #05 - Router Module
+
+[🔗 **Github**](https://github.com/nuxt-community/router-module)
+
+> Nuxt.js module to use router.js instead of pages/ directory
+
+__Setup__
+
+Add `@nuxtjs/router` dependency to your project
+
+```bash
+yarn add --dev @nuxtjs/router # or npm install --save-dev @nuxtjs/router
+```
+
+Add `@nuxtjs/router` to the `buildModules` section of `nuxt.config.js`
+
+```js
+export default {
+  buildModules: [
+    // Simple usage
+    '@nuxtjs/router',
+    // With options
+    ['@nuxtjs/router', 
+      {
+         /* module options */
+        path: '<srcDir>',
+        fileName: 'router.js'
+      }
+    ]
+  ]
+}
+```
+
+If you are using SPA mode, add an index `/` route to `generate` section of `nuxt.config.js`:
+
+```js
+export default {
+  generate: {
+    routes: [
+      '/'
+    ]
+  }
+}
+```
+
+This module, by default, disable the `pages/` directory into Nuxt and will use a `router.js` file at your `srcDir` directory:
+
+```bash
+components/
+  my-page.vue
+pages/
+router.js
+```
+
+`router.js` need to export a `createRouter` method like this:
+
+```js
+import Vue from 'vue'
+import Router from 'vue-router'
+import MyPage from '~/components/my-page'
+Vue.use(Router)
+export function createRouter() {
+  return new Router({
+    mode: 'history',
+    routes: [
+      {
+        path: '/',
+        component: MyPage
+      }
+    ]
+  })
+}
 ```
