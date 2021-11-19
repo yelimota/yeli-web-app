@@ -2,7 +2,7 @@
 
   button.social-button(:class='`social-button--${typeButton}`')
     img.social-button__icon(:src='srcIcon')
-    span.social-button__text Twitch
+    span.social-button__text {{spanText}}
 
 </template>
 <script>
@@ -17,6 +17,10 @@ export default {
     srcIcon: {
       type: String,
       default: ''
+    },
+    spanText: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -26,11 +30,17 @@ export default {
 <style lang='stylus' scoped>
   .social-button
     display: block
-    margin: auto
-    font-size: 4vw
+    margin: 3vw auto
+    font-size: 7vw
+    position relative
+    width: 80%
+    border-radius 4vw
+    border: 0
 
   .social-button--twitch
-    background green
+    background rgba($clr-twich, .7)
+    color $clr-white
   .social-button--gmail
-    background green
+    background rgba($clr-google, .7)
+    color $clr-white
 </style>
