@@ -12,21 +12,25 @@
     .cover-page__buttons-box
       .cover-page__button
         SocialButton(
-          spanText='Twitch'
-          typeButton='twitch'
-          srcIcon='~assets/icons/twitch.svg')
+          classButton='twitch' text='Twitch')
+          IconTwitch
       .cover-page__button
         SocialButton(
-          spanText='Gmail'
-          typeButton='gmail'
-          srcIcon='~assets/icons/gmail.svg')
+          classButton='gmail' text='Gmail')
+          IconGmail
 
 </template>
 
 <script>
 
+import IconTwitch from '~/assets/icons/twitch.svg?inline'
+import IconGmail from '~/assets/icons/gmail.svg?inline'
+
 export default {
-  name: 'CoverPage'
+  name: 'CoverPage',
+  components: {
+    IconTwitch, IconGmail
+  }
 }
 
 </script>
@@ -37,7 +41,7 @@ export default {
   height 100vh
   display flex
   flex-direction column
-  justify-content end
+  justify-content flex-end
   &::before
     top 0
     left 0

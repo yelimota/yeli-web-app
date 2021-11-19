@@ -1,8 +1,10 @@
 <template lang='pug'>
 
-  button.social-button(:class='`social-button--${typeButton}`')
-    img.social-button__icon(:src='srcIcon')
-    span.social-button__text {{spanText}}
+  button.social-button(
+  :class='`social-button--${classButton}`')
+
+    slot
+    span.social-button__text {{text}}
 
 </template>
 <script>
@@ -10,17 +12,13 @@
 export default {
   name: 'SocialButton',
   props: {
-    typeButton: {
+    text: {
+      type: String,
+      default: ''
+    },
+    classButton: {
       type: String,
       default: 'twitch'
-    },
-    srcIcon: {
-      type: String,
-      default: ''
-    },
-    spanText: {
-      type: String,
-      default: ''
     }
   }
 }
@@ -28,6 +26,7 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
+
   .social-button
     display: block
     margin: 3vw auto
@@ -36,11 +35,15 @@ export default {
     width: 80%
     border-radius 4vw
     border: 0
+    svg
+      fill: $clr-white
 
+  .social-button--twitch,
+  .social-button--gmail
+    color $clr-white
   .social-button--twitch
     background rgba($clr-twich, .7)
-    color $clr-white
   .social-button--gmail
     background rgba($clr-google, .7)
-    color $clr-white
+
 </style>
