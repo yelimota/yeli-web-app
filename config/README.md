@@ -17,7 +17,7 @@ yarn add -D pug pug-plain-loader
 
 ### #02 - Stylus
 
-> You only need to install the dependency
+> Because Nuxt-edge is not stable yet, it is necessary to install an older version of `stylus-loader v3.0.2`, since the latest versions cause some errors.
 
 ```bash
 # install dependencie
