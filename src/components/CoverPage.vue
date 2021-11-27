@@ -63,13 +63,13 @@ export default {
   &__title
     font-family: $font-streamer-title
     color: $clr-white
-    font-size 15vw
+    font-size 60px
     font-weight 400
-    line-height 15vw
+    line-height 60px
   &__subtitle
     font-family $font-streamer-subtitle
     color: $clr-white
-    font-size: 8.5vw
-    line-height: 3vw
+    font-size:30px
+    line-height: 10px
     font-weight 700
 </style>
