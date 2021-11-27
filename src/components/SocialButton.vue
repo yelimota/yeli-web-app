@@ -29,11 +29,11 @@ export default {
 
   .social-button
     display: block
-    margin: 3vw auto
-    font-size: 7vw
+    margin: 10px auto
+    font-size: 15px
     position relative
     width: 80%
-    border-radius 4vw
+    border-radius 12px
     border: 0
     svg
       fill: $clr-white
